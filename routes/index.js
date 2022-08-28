@@ -84,6 +84,10 @@ route.post("/", async (req, res, next) => {
   }
 });
 
+route.get("/", async (req, res, next) => {
+  res.status(200).send("ok");
+});
+
 //404 error handler
 route.use((req, res, next) => {
   next(createError.NotFound("Not Found"));
